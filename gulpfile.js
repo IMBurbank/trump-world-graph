@@ -110,7 +110,7 @@ gulp.task('default', function (callback) {
   )
 })
 
-gulp.task('gulpProd', function (callback) {
+gulp.task('prod', function (callback) {
   runSequence('sass', 'babel', 'updateProd', ['watchProd'],
     callback
   )
