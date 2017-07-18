@@ -2,10 +2,10 @@
 <html>
 
   <head>
-    <title>TrumpWorldGraph</title>
+    <title>Trump World Connections Graph</title>
 
-    <!-- Font not currently used -->
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Diplomata+SC" rel="stylesheet">
 
     <!--build:css styles/css/main.min.css-->
     <link rel="stylesheet" href="styles/css/main.css">
@@ -13,18 +13,49 @@
   </head>
 
   <body>
+    <header><h1>Trump World Connections</h1></header>
 
-    <div id="root">
+    <div class="intro-content">
+      <h3>
+        From the Buzzfeed article
+        <a href="https://www.buzzfeed.com/johntemplon/help-us-map-trumpworld" target="_blank">
+          Help Us Map TrumpWorld
+        </a>
+      </h3>
+
+      <p class="quote">
+        No American president has taken office with a giant network of businesses, investments,
+        and corporate connections like that amassed by Donald J. Trump. His family and advisers
+        have touched a staggering number of ventures, from a hotel in Azerbaijan to a poker company
+        in Las Vegas.
+      </p>
+
+      <p class="page-summary">
+        The force-directed graph below represents the relationship between all known entities
+        with three or more links to other entities within Trump's world. I made use
+        of <a href="https://data.world/sya/trumpworld">this great dataset</a> and
+        d3.js to create this graph. Click the nodes for more information.
+      </p>
+    </div>
+
+    <div id="graph" class="graph-container">
     	<!-- This div content will be managed by D3. -->
     </div>
 
+    <footer>
+      <span class='author'>By Isaac Burbank 2017</span>
+      <span class='repo-link'>
+        <a href="https://github.com/IMBurbank/trump-world-graph">Click to Github Repo</a>
+      </span>
+    </footer>
+
     <!--  ***Switch to D3 min for production***  -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.min.js"></script> -->
-    <!-- <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
 
     <!--  ***Switch for Dev***  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.js"></script>
-    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.js"></script> -->
+    <!-- <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script> -->
 
     <!--build:js scripts/js/main.min.js-->
     <script type="text/javascript" src="scripts/js/main.js" ></script>

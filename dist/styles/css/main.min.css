@@ -1,2 +1,119 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: center; }
+
+div.details, div.tooltip {
+  position: absolute;
+  padding: 8px;
+  border: 0;
+  font: 12px sans-serif;
+  color: #fff;
+  background: #505964;
+  border-radius: 8px; }
+
+div.details {
+  right: 0;
+  bottom: 4px; }
+
+div.tooltip {
+  z-index: 10;
+  min-width: 80px;
+  min-height: 30px;
+  pointer-events: none; }
+
+h1,
+h2,
+h3 {
+  margin: 0; }
+
+h1 {
+  font-family: 'Diplomata SC', cursive;
+  font-size: 1.8rem; }
+
+header,
+footer {
+  width: 100%;
+  margin: 0;
+  padding: .25rem 0;
+  color: #f2f152;
+  background: #000; }
+  header a,
+  footer a {
+    color: #f2f152; }
+  header .author,
+  footer .author {
+    margin-right: 3rem; }
+
+footer {
+  font-size: .8em; }
+
+.intro-content {
+  width: 900px;
+  text-align: left; }
+  .intro-content .quote {
+    padding: 0 6rem 0 3rem;
+    color: #6d787e;
+    box-shadow: inset 8px 0 0 rgba(0, 0, 0, 0.3); }
+  .intro-content .page-summary {
+    margin-bottom: 0;
+    font-size: 1.1rem; }
+  .intro-content a {
+    color: #296cbd; }
+
+.graph-container {
+  position: relative;
+  display: inline-block; }
+
+.chart-palette {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset, 0 10px 6px -6px #777; }
+
+.link line {
+  stroke: #999;
+  stroke-width: 1.5px;
+  stroke-opacity: .6; }
+
+.node circle {
+  stroke: #fff;
+  stroke-width: 1.5px; }
+
+.table-container {
+  width: 100%;
+  height: 120px;
+  margin-top: 1em;
+  font-size: .8em;
+  overflow-y: scroll; }
+
+.link-table-name, .link-table-details {
+  max-width: 30em; }
+
+.link-table-type {
+  width: 10em; }
+
+.link-table th {
+  border-top: 2px solid rgba(180, 180, 180, 0.4);
+  border-bottom: 2px solid rgba(180, 180, 180, 0.4); }
+
+.link-table td {
+  border-bottom: 1px solid rgba(180, 180, 180, 0.3); }
+
+.link-table a {
+  color: #fff; }
 
 /*# sourceMappingURL=main.css.map */

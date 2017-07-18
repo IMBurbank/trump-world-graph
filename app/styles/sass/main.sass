@@ -1,0 +1,137 @@
+//  Variables
+
+$primary-light-color: #fff
+$secondary-light-color: #f2f152
+$primary-dark-color: #000
+$secondary-dark-color: #505964
+$quote-text-color: #6d787e
+$intro-link-color: #296cbd
+$link-color: #999
+$line-width: 1.5px
+
+
+//  Mixins
+
+=table-border($side, $width, $opacity)
+  border-#{$side}: $width solid rgba(180, 180, 180, $opacity)
+
+
+//  Styling
+
+body
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  width: 100vw
+  min-height: 100vh
+  margin: 0
+  padding: 0
+  text-align: center
+
+div
+  &.details,
+  &.tooltip
+    position: absolute
+    padding: 8px
+    border: 0
+    font: 12px sans-serif
+    color: $primary-light-color
+    background: $secondary-dark-color
+    border-radius: 8px
+
+  &.details
+    right: 0
+    bottom: 4px
+
+  &.tooltip
+    z-index: 10
+    min-width: 80px
+    min-height: 30px
+    pointer-events: none
+
+h1,
+h2,
+h3
+  margin: 0
+
+h1
+  font-family: 'Diplomata SC', cursive
+  font-size: 1.8rem
+
+header,
+footer
+  width: 100%
+  margin: 0
+  padding: .25rem 0
+  color: $secondary-light-color
+  background: $primary-dark-color
+
+  a
+    color: $secondary-light-color
+
+  .author
+    margin-right: 3rem
+
+footer
+  font-size: .8em
+
+.intro-content
+  width: 900px
+  text-align: left
+
+  .quote
+    padding: 0 6rem 0 3rem
+    color: $quote-text-color
+    box-shadow: inset 8px 0 0 rgba(0, 0, 0, .3)
+
+  .page-summary
+    margin-bottom: 0
+    font-size: 1.1rem
+
+  a
+    color: $intro-link-color
+
+.graph-container
+  position: relative
+  display: inline-block
+
+.chart-palette
+  background: $primary-light-color
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .3), 0 0 40px rgba(0, 0, 0, .1) inset, 0 10px 6px -6px #777
+
+.link
+  line
+    stroke: $link-color
+    stroke-width: $line-width
+    stroke-opacity: .6
+
+.node
+  circle
+    stroke: $primary-light-color
+    stroke-width: $line-width
+
+.table-container
+  width: 100%
+  height: 120px
+  margin-top: 1em
+  font-size: .8em
+  overflow-y: scroll
+
+.link-table
+  &-name,
+  &-details
+    max-width: 30em
+
+  &-type
+    width: 10em
+
+  th
+    +table-border(top, 2px, .4)
+    +table-border(bottom, 2px, .4)
+
+  td
+    +table-border(bottom, 1px, .3)
+
+  a
+    color: $primary-light-color
